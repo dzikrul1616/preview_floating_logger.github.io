@@ -32,9 +32,11 @@ dependencies:
     sdk: flutter
   shared_preferences: ^2.2.2
   floating_draggable_widget: ^2.3.0
-  device_preview: ^1.2.0
+  device_preview: ^1.2.0 
+  custom_refresh_indicator: ^4.0.1
+  google_fonts: ^6.2.1
   floating_logger:
-    path: ../flutter_floating_logger
+    path: ../../flutter_floating_logger
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.8

@@ -1,6 +1,7 @@
 import 'package:floating_logger/floating_logger.dart';
-import 'package:preview_flutter_floating_logger/main.dart';
 import 'package:preview_flutter_floating_logger/utils/preferences.dart';
+
+import 'home_page.dart';
 
 class DevelopperMode extends StatefulWidget {
   static const routeName = '/developper';
@@ -59,17 +60,28 @@ class _DevelopperModeState extends State<DevelopperMode> {
               ? Padding(
                   padding: const EdgeInsets.all(10),
                   child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-                          Text(
-                            "Debugger API",
-                            style: GoogleFonts.inter(
-                              fontSize: 16.0,
-                              fontWeight: FontWeight.bold,
-                            ),
+                          Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text(
+                                "Debugger API",
+                                style: GoogleFonts.inter(
+                                  fontSize: 16.0,
+                                  fontWeight: FontWeight.bold,
+                                ),
+                              ),
+                              Text(
+                                "Deactivate Floating Debugger",
+                                style: GoogleFonts.inter(
+                                  fontSize: 12.0,
+                                  fontWeight: FontWeight.normal,
+                                ),
+                              ),
+                            ],
                           ),
                           Switch(
                             activeTrackColor: Colors.blue,
