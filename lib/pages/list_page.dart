@@ -92,13 +92,20 @@ class _ListPageState extends State<ListPage> {
   }
 
   Padding _bodyWidget() {
+    var crossAxisCount = MediaQuery.of(context).size.width > 900 &&
+            MediaQuery.of(context).size.width < 1200
+        ? 3
+        : MediaQuery.of(context).size.width >= 1200 &&
+                MediaQuery.of(context).size.width < 1600
+            ? 4
+            : 2;
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 15),
       child: GridView.builder(
         padding: EdgeInsets.zero,
-        gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+        gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
           childAspectRatio: 1.0,
-          crossAxisCount: 2,
+          crossAxisCount: crossAxisCount,
           mainAxisSpacing: 20,
           crossAxisSpacing: 20,
           mainAxisExtent: 230,
@@ -349,7 +356,7 @@ class _ListPageState extends State<ListPage> {
   }
 
   Future<void> fetchSuccess() async {
-    try {
+    try { 
       final response = await DioLogger.instance.get(
         'https://fakestoreapi.com/products',
         options: Options(headers: {

@@ -93,10 +93,10 @@ packages:
     dependency: transitive
     description:
       name: dio
-      sha256: "5fe8c82766abd7494130a3dc5b9ffb8ca916898900c75a369b287267eac8d5b0"
+      sha256: "253a18bbd4851fecba42f7343a1df3a9a4c1d31a2c1b37e221086b4fa8c8dbc9"
       url: "https://pub.dev"
     source: hosted
-    version: "5.8.0"
+    version: "5.8.0+1"
   dio_web_adapter:
     dependency: transitive
     description:
@@ -148,10 +148,11 @@ packages:
   floating_logger:
     dependency: "direct main"
     description:
-      path: "../../flutter_floating_logger"
-      relative: true
-    source: path
-    version: "0.0.1"
+      name: floating_logger
+      sha256: c881ba315d406c7b546010825b4758b0d6ac799d1db09a9ccbc52e910fad9ba8
+      url: "https://pub.dev"
+    source: hosted
+    version: "0.0.2"
   flutter:
     dependency: "direct main"
     description: flutter

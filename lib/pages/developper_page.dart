@@ -41,6 +41,29 @@ class _DevelopperModeState extends State<DevelopperMode> {
     return FloatingLoggerControl(
       /// get local preference hide and unhide in global state
       getPreference: newMethod,
+      widgetItemBuilder: (index, data) {
+        final item = data[index];
+        return Padding(
+          padding: const EdgeInsets.only(bottom: 10),
+          child: Card(
+            child: ListTile(
+              title: Text('${item.type!} [${item.response}]',
+                  style: TextStyle(fontSize: 12.0)),
+              subtitle: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text("URL   : ${item.path}",
+                      style: TextStyle(fontSize: 12.0)),
+                  Text("Data  : ${item.data}",
+                      style: TextStyle(fontSize: 12.0)),
+                  Text("cURL  : ${item.curl}",
+                      style: TextStyle(fontSize: 12.0)),
+                ],
+              ),
+            ),
+          ),
+        );
+      },
 
       /// ValueListenable for change visibility on/off
       isShow: isShowDebuggerNotifier,
