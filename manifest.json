@@ -1,6 +1,6 @@
 {
-    "name": "preview_flutter_floating_logger",
-    "short_name": "preview_flutter_floating_logger",
+    "name": "example",
+    "short_name": "example",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",
