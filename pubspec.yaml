@@ -32,7 +32,7 @@ dependencies:
   custom_refresh_indicator: ^4.0.1
   device_preview: ^1.2.0
   floating_draggable_widget: ^2.3.0
-  floating_logger: ^0.0.2
+  floating_logger: ^0.1.6
   flutter:
     sdk: flutter
   google_fonts: ^6.2.1

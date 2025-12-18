@@ -356,7 +356,7 @@ class _ListPageState extends State<ListPage> {
   }
 
   Future<void> fetchSuccess() async {
-    try { 
+    try {
       final response = await DioLogger.instance.get(
         'https://fakestoreapi.com/products',
         options: Options(headers: {
@@ -390,7 +390,7 @@ class _ListPageState extends State<ListPage> {
       }
     } catch (e) {
       ScaffoldMessenger.of(context).showSnackBar(
-        const SnackBar(content: Text('Failed to fetch facts')),
+        SnackBar(content: Text(e.toString())),
       );
     }
   }

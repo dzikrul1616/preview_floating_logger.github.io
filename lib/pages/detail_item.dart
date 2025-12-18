@@ -297,7 +297,7 @@ class _DetailItemState extends State<DetailItem> {
       }
     } catch (e) {
       ScaffoldMessenger.of(context).showSnackBar(
-        const SnackBar(content: Text('Failed to fetch facts')),
+        SnackBar(content: Text(e.toString())),
       );
     }
   }

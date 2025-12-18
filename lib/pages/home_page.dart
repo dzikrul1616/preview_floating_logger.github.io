@@ -114,7 +114,7 @@ class _MyHomePageState extends State<MyHomePage> {
     } catch (e) {
       // ignore: use_build_context_synchronously
       ScaffoldMessenger.of(context).showSnackBar(
-        const SnackBar(content: Text('Failed to fetch facts')),
+        SnackBar(content: Text(e.toString())),
       );
     }
   }
